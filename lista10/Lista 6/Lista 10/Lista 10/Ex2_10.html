@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Jogador 1</h3><button onclick="J1()">Jogar dadinho</button>
+  <br>
+  <br>
+  <h3>Jogador 2</h3><button onclick="J2()">Jogar dadinho</button>
+  <br>
+  <br>
+  <br>
+  <div id="Jog1">
+    <div id="Result"></div>
+  
+  </div>
+</body>
+</html>
+
+<script>
+var dado1;
+var dado2;
+
+function J1(){
+   dado1 = parseInt(Math.random() * 6) + 1; 
+  Jog1.innerHTML = `Jogador 1: ${dado1}`;
+}
+
+function J2(){
+   dado2 = parseInt(Math.random() * 6) + 1; 
+  Jog1.innerHTML = `Jogador 2: ${dado2}`;
+}
+if(dado1>dado2){
+  Result.innerHTML='Jogador 1 venceu';
+}else if(dado2>dado1){
+Result.innerHTML='Jogador  2 venceu';
+}else{
+  Result.innerHTML='Empate';
+}
+
+</script>

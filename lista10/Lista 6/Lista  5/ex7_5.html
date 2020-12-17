@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Valor da renda da familía: <input id="vRenda" type="text"><br>
+  Valor da prestação: <input id="vPrest" type="text"><br>
+
+  <button onclick="calc()">Verificar financiamento</button>
+  <div id="resultado"></div>
+  <p id="complemento" style="color:red;"></p>
+</body>
+</html>
+
+<script>
+  function calc(){
+    var conta = Number(vPrest.value) / Number(vRenda.value) * 100;
+    resultado.innerHTML = `A prestação corresponde a ${conta}% da renda familiar`;
+
+    if (soma<30){
+      complemento.innerHTML = `<b>Será necessário complementar a renda familiar</br>`;
+    }
+  }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ Digite nota 1: <input id="n1" type="">
+ Digite nota 2: <input id="n2" type="">
+ Digite nota 3:  <input id="n3" type="">
+ <button onclick="calcular()">Analisar Nota</button>
+ <div id="result">
+
+ </div>
+</body>
+</html>
+
+<script>
+  function calcular(){
+    var calc= (Number(n1.value)+Number(n2.value)+Number(n3.value))/3;
+
+    result.innerHTML = `Sua média foi de ${calc.toFixed(2)}`;
+
+    if (calc>9.4) {
+      result.innerHTML += "<br>Parabens voce é fora de serie"
+    }
+  }
+</script>

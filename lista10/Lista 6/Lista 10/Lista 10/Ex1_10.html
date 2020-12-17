@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="Nota()">Gerar uma nota de aluno entre 0 e 10</button>
+  <button onclick="Freq()">Gerar uma frequencia de 0 a 100</button>
+  <br>
+  <br>
+  <div id="Mostrar">
+  </div>
+  <div id="Mostrar2">
+  </div>
+ 
+</body>
+</html>
+
+<script>
+function Nota(){
+var num = parseInt(Math.random() * 11);
+Mostrar.innerHTML= `Nota ${num}`;
+}
+
+function Freq(){
+var num = parseInt(Math.random() * 101);
+Mostrar2.innerHTML=`Frequencia ${num}%`;
+}
+
+</script>

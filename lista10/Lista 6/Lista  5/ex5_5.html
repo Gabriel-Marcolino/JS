@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Qual o valor da pizza: <input id="pizza" type="text">
+  Quantos amigos reunidos: <input id="amigos" type="text">
+  <button onclick="calc()">Rola a pizza?</button>
+  <div id="div_resultado">
+
+  </div>
+
+  <div style="color: blue; display: none;" id="div_resultado2">
+<i><b>Deu ruim pizza muito cara</b></i>
+  </div>
+</body>
+</html>
+
+<script>
+  function calc() {
+
+    div_resultado2.style.display= 'none';
+    var conta=Number(pizza.value)/Number(amigos.value);
+    div_resultado.innerHTML= `Cada amigo vai pagar ${conta}`;
+    if (conta>20){
+      div_resultado2.style.display= 'block';
+    }
+  }
+</script>

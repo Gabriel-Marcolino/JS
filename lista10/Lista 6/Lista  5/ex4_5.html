@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Quantas latas de refrigerante você toma por dia:<input id="latas" type="text">
+  <button onclick="calcular()">Calcular</button>
+  
+</body>
+</html>
+<script>
+  function calcular(){
+var num_latas=Number(latas.value)
+
+var calc= num_latas * 365;
+
+alert(`Você consome ${calc.toFixed(2)}`);
+
+if (calc >= 500) {
+  alert ('cuidado com a diabetes');
+}
+  }
+</script>

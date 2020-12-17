@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input placeholder="distancia da sua casa a pizzaria" id="distancia" type="text">
+  <button onclick="analisar()">Ver</button>
+  <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+  function analisar() {
+var distancia_informada = Number(distancia.value);
+
+div_resultado.innerHTML='A sua pizza será entregue, pórem o valor de entrega é de R$ 25,00';
+  
+  if(distancia_informada < 50){
+    div_resultado.innerHTML='A sua pizza será entregue e não custará nada para você';
+  }
+  if(distancia_informada > 250){
+    div_resultado.innerHTML='A pizza Rãti não entrega neste endereço';
+  }
+  }
+</script>

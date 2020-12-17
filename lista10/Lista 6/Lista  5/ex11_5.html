@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input placeholder="Hora que assiste série?" id="horario" type="text">
+
+  <button onclick="calcular()">
+  Ver recomendação
+  </button>
+  <div id="resultado"></div>
+</body>
+</html>
+
+<script>
+  function calcular() {
+var valor_horario = Number(horario.value);
+
+resultado.innerHTML = `Não é recomendavel que você assita sua série favorita no horário ${valor_horario}`; 
+
+if (valor_horario < 19) {
+  resultado.innerHTML = `O horário ${valor_horario}hr é adequado para assistir`;
+}
+if(valor_horario > 21) {
+  resultado.innerHTML = `O horário ${valor_horario}hr é adequada para assistir`;
+}
+
+  }
+</script>
