@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" placeholder="Nome do 1° Artista" id="nome_primeiro"><br>
+   <input type="text" placeholder="Música do 1° Artista" id="musica_primeiro"><br>
+   <input type="text" placeholder="Data de lançamento de música mm/dd/aaaa" id="lancamento_primeiro"><br>
+   <br>
+   <input type="text" placeholder="Nome do 2° Artista" id="nome_segundo"><br>
+   <input type="text" placeholder="Música do 2° Artista" id="musica_segundo"><br>
+   <input type="text" placeholder="Data de lançamento de música mm/dd/aaaa" id="lancamento_segundo"><br>
+   <br>
+   <button onclick="Cadastrar()">Cadastrar</button><br>
+   <br>
+   <button style="display: none;" onclick="artista_um()" id="btn_um">Artista 1 +50 views</button><br>
+   <br>
+   <button style="display: none;" onclick="artista_dois()" id="btn_dois">Artista 2 +50 views</button><br> 
+   <br>
+   <div id="div_um"></div><br>
+   <div id="div_dois"></div>
+</body>
+</html>
+<script>
+   
+    visu1=0;
+    visu2=0;
+
+    function Cadastrar(){
+        btn_um.style.display = 'block';
+        btn_dois.style.display = 'block';
+        
+    }
+
+    function artista_um(){
+       
+        let cantor_um={
+        nome: nome_primeiro.value,
+        musica: musica_primeiro.value,
+        lancamento: new Date(lancamento_segundo.value)
+     
+    }
+       
+        visu1+=50;
+
+        let agora = new Date;
+        let diferenca = parseInt((agora - cantor_um.lancamento)/1000/60/60/24);
+        let media = (visu1/diferenca);
+
+      
+        div_um.innerHTML = `Visualizações da música <b>${cantor_um.musica}</b> de <b>${cantor_um.nome}</b> : <u>${visu1}</u> (Média de <b>${media.toFixed(1)}</b> views por dia)`;
+    }
+    function artista_dois(){
+        
+    let cantor_dois={
+        nome: nome_segundo.value,
+        musica: musica_segundo.value,
+        lancamento: new Date(lancamento_primeiro.value)
+      
+    
+    }
+
+        visu2+=50;
+        
+
+        let agora = new Date;
+        let diferenca = parseInt((agora - cantor_dois.lancamento)/1000/60/60/24);
+        let media = (visu2/diferenca);
+
+        div_dois.innerHTML = `Visualizações da música <b>${cantor_dois.musica}</b> de <b>${cantor_dois.nome}</b> : <u>${visu2}</u> (Média de <b>${media.toFixed(1)}</b> views por dia)`;
+    }
+</script>

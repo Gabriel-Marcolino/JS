@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+</head>
+<body>
+    <h1>Teste"Pense Rápido"</h1>
+    <input onkeyup="start()" placeholder="Algo com ao menos 5 letras" id="algo">
+    <br>
+    <br>
+    <button onclick="teste()">Iniciar Teste</button>
+
+    <div id="div"></div>
+    
+    <div id="div2"></div>
+    
+    <div id="div_tempo"></div>
+</body>
+</html>
+<script>
+   
+function teste(){
+   var palavra = algo.value;
+   var tmpalavra = palavra.trim().length;
+   if(tmpalavra <5) {
+div2.innerHTML='';
+div.innerHTML="Valor inválido, digite ao menos 5 letras sem espaços em branco nas extremidades";
+   }else{
+       div.innerHTML='';
+       for(var cont = 1; cont<= tmpalavra;cont++){
+          div2.innerHTML+= `${palavra[tmpalavra - (cont)]}<br>`;
+          
+       }
+       algo.value='';
+       
+}
+       
+   }
+
+
+
+</script>
