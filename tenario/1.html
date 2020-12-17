@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="digite sua idade" id="idade">
+    <button onclick="amostra()">Analisar</button>
+    <br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function amostra(){
+        var i = Number(idade.value);
+        div_resultado.innerHTML = i >= 18 ? 'vamos tirar cnh?' : 'vai jogar playstation'
+    }
+</script>

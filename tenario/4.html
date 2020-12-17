@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="frequencia do aluno" id="frequencia">
+    <button onclick="amostra()">ANALISE</button>
+    <br><br>
+        <img id="image" width="300px">
+    
+</body>
+</html>
+<script>
+    function amostra(){
+        var freq = Number(frequencia.value);
+        var absolut = freq < 50 ? image.src='https://img.freepik.com/fotos-gratis/turista-com-o-polegar-para-cima_1368-7035.jpg?size=626&ext=jpg' : image.src = 'https://static.quizur.com/i/b/5747891e74cc93.67717206pessoas-inteligentes.jpg'
+    }
+</script>

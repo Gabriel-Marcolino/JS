@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="nota 1" id="nota1">
+    <input placeholder="nota 2" id="nota2">
+    <button onclick="amostra()">ANALISE</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+function amostra(){
+    var num1 = Number(nota1.value);
+    var num2 = Number(nota2.value);
+    var i = (num1 + num2) / 2;
+
+    resultado.innerHTML = i < 6 ? 'infelizmente reprovado' : i < 7.5 ? 'aprovado - automação,seg ou teestes' : 'aprovado - dev'
+} 
+</script>

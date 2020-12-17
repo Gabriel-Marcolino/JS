@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="vai comprar quantos?" id="mrc">
+    <button onclick="amostra()">ANALISE</button>
+    <div id="exibir"></div>
+</body>
+</html>
+<script>
+    function amostra(){
+        var i = Number(mrc.value) * 3.00;
+        var o = Number(mrc.value) * 2.50;
+
+        exibir.innerHTML = i <= 36 ? `o valor de compra foi de: ${i}` : `o valor de compra foi de: ${o}`
+    }
+</script>

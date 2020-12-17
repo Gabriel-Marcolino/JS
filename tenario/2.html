@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="digite saldo da conta" id="saldo">
+    <input placeholder="digite o valor de debito" id="debito">
+    <button onclick="amostra()">Analise</button>
+    <div id="Div_resultado"></div>
+</body>
+</html>
+<script>
+    function amostra(){
+        var i = Number(saldo.value);
+        var d = Number(debito.value);
+        var resultado = i - d;
+
+        Div_resultado.innerHTML = resultado < 0 ? `<b>seu saldo de conta é de: ${resultado}</b>` : `<i>Seu saldo de conta é de: ${resultado}</i>`;
+    }
+</script>
