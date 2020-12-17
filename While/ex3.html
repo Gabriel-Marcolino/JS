@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="time1" placeholder="Digite um time bom" type="text">
+  <input id="time2" placeholder="Digite um time ruim" type="text">
+  <button onclick="mostrar()">repetir realidade</button><br>
+  <span id="span_frases"></span>
+</body>
+</html>
+<script>
+
+  
+  
+  var contador = 0; 
+  span_frases.innerHTML = '';
+  function mostrar(){
+
+  while (contador < 10) { 
+    
+      span_frases.innerHTML += `<b>${time1.value}</b> é melhor que <b>${time2.value}</b><br>`;
+      contador++;
+     
+  }
+ 
+}
+</script>
+</html>

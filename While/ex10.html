@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>De quantos em quantos dias faz musculação?</h3><input type="text" id="dias">
+  <button onclick="calc()">Exibir</button>
+  <div id="exibir"></div>
+</body>
+</html>
+
+<script>
+  function calc(){
+    var cont = 0
+    var numero = Number(dias.value)
+
+    exibir.innerHTML = ''
+    while(cont<30){
+      var conta = cont%numero
+      if(conta==0){
+        exibir.innerHTML += `<br>Dia ${cont+1} - <b>Musculação</b>`
+      }else{
+        exibir.innerHTML += `<br>Dia ${cont+1} - comer,dormir,etc`
+      }
+      cont++;
+    }
+  }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input placeholder="Digite o numero dos sorteios" id="qto" type="text"><br>
+  <button onclick="sorteio()">sortear numeros</button>
+  <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+  function sorteio(){
+    var contador = 0;
+    div_msg.innerHTML="";
+    var vezes = Number(qto.value);
+    while (contador < vezes){
+      var resultado = parseInt(Math.random()*100) +1;
+      div_msg.innerHTML += `${resultado} <br>`;
+      contador++
+    }
+  }
+</script>

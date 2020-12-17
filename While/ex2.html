@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="mostrar()">Diga algo sobre a quarentena</button><br>
+  <span id="span_frases"></span>
+</body>
+</html>
+<script>
+
+  
+  
+  var contador = 0; // contagem de vezes que já mostrei o alert e na tela
+  var contadorr = 1;
+  span_frases.innerHTML = '';
+  function mostrar(){
+  // estrutura de REPETIÇÃO
+  // while ("enquanto")
+  // o teste lógico no while chama-se "Condição de Repetição"
+  while (contador < 7) { // Enquanto (contador < 5) for verdade (true)...
+      // todo o bloco é executado novamente!
+    
+      span_frases.innerHTML += `${contadorr}. Uma bosta! <br>`;
+      contadorr++;
+      contador++;
+      // ao chegar no final, o while é testado novamente!
+  }
+  // quando (contador < 5) for falso (false), o bloco while deixa de ser executado
+
+  // Se eu quiser que repita 20 vezes, basta troca 5 por 20 no while
+}
+</script>
+</html>

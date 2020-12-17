@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Numeros</h3>
+  <button onclick="curto()">Curto 3 e 5</button>
+  <br>
+  <div id="result"></div>
+</body>
+</html>
+
+<script>
+function curto(){
+  cont=0;
+
+  while(cont<100){
+    if(cont ==0){
+      result.innerHTML += `<br>${cont}`;
+    }else if (cont % 3 == 0 && cont % 5 ==0){
+      result.innerHTML += `<br>É TRI! É PENTA!`;
+    }else if ( cont % 5 ==0){
+      result.innerHTML += `<br> É PENTA!`;
+  }else if ( cont % 3 ==0){
+      result.innerHTML += `<br> É TRI!`;
+}else{
+  result.innerHTML += `<br>${cont}`;
+}
+cont++
+}
+}
+</script>
