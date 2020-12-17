@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input placeholder="Digite uma frase" type="text" id="frase" onkeyup="verificar()"><br>
+<div id="msg"></div>
+
+</body>
+</html>
+<script>
+var c = 0
+function verificar(){
+    var f = frase.value;
+    while(c < f.length){
+        msg.innerHTML += `${f[c]}<br>`;
+        c++
+    }
+}
+
+</script>

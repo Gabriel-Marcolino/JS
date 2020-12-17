@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista break - q04</title>
+</head>
+<body>
+
+    Qual você prefere? <select id="favorito">
+        <option value="0">Marvel</option>
+        <option value="1">DC Comics</option>
+    </select> <br>
+    
+    <button onclick="programacao()">
+        Ver programação semanal na TV
+    </button>
+
+    <div id="div_programacao"></div>
+    
+</body>
+</html>
+<script>
+
+function programacao() {
+    var valor_favorito = Number(favorito.value);
+
+    for (var sorteio = 1; sorteio <= 5; sorteio++) {
+        var numero_sorteado = parseInt(Math.random()*2); 
+        
+        if (numero_sorteado == valor_favorito) {
+            break;
+        }
+    }
+
+    if (sorteio <= 5) {
+        div_programacao.innerHTML = `Você verá um filme que gosta no ${sorteio}º dia`;
+    } else {
+        div_programacao.innerHTML = "É, ou lê um livro ou assiste um filme que não gosta mesmo";
+    }
+}
+
+</script>

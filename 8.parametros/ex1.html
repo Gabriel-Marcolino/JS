@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 46</title>
+</head>
+<body>
+    Pessoas no Elevador<b id="b_total">0</b>
+    <br><br>
+    <button onclick="depositar(85, 'Não cabe mais ninguem')">Entrar Homem</button>
+    <button onclick="depositar(70, 'Não cabe mais ninguem')">Entrar Mulher</button>
+   
+</body>
+</html>
+<script>
+    let total = 0;
+
+// função com 2 PARÂMETROS 
+function depositar(valor_depositado, frase) {
+    total += valor_depositado; 
+    b_total.innerHTML = `${total.toFixed(2)} - ${frase}`;
+
+}
+</script>

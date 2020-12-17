@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Atividade 14 </title>
+</head>
+<style>
+    img {
+        height: 100px;
+        margin: 2px;
+    }
+</style>
+<body>
+        <h1> Campo Minado da hora! </h1>
+        <button onclick="novo_jogo()" id="butt"> Novo jogo </button>
+        <br><br>
+        Minas: <b id="minas"> ? </b>
+        <br>
+        Explosões: <b id="explosao"> ? </b>
+        <br>
+        Pontos: <b id="pontos"> ? </b>
+        <br><br>
+        <div id="game">
+        </div>
+</body>
+</html>
+<script>
+    var points = 0;
+    var explosion = 0;
+
+    function novo_jogo() {
+        var mine = 0;
+        points = 0;
+        explosion = 0;
+
+        game.innerHTML = '';
+
+        for (cont = 1; cont <= 12; cont++) {
+            sorte = parseInt(Math.random() * 2);
+
+            if (sorte == 0 && mine < 6) {
+                game.innerHTML += `<img src = "midia/q.png" onclick= "this.src= 'midia/1.png'; erro()">`;
+                mine++;
+            } else {
+                game.innerHTML += `<img src = "midia/q.png" onclick="this.src= 'midia/2.png'; certo()">`;
+            }
+
+            if (cont % 4 == 0) {
+                game.innerHTML += '<br>';
+            }
+        }
+
+        minas.innerHTML = `${mine}`;
+        explosao.innerHTML = `${explosion}`;
+        pontos.innerHTML = `${points}`;
+    }
+
+    function erro() {
+        explosion++;
+        explosao.innerHTML = `${explosion}`;
+    }
+
+    function certo() {
+        points += 100;
+        pontos.innerHTML = `${points}`;
+    }
+
+</script>

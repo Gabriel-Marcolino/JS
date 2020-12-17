@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Atividade 02 </title>
+</head>
+
+<body>
+    <center>
+        <h1> Places </h1>
+
+        Digite um local para onde já viajou:
+        <br>
+        <input type="text" id="lugar">
+        <br><br>
+        <button onclick="cadastrar()"> Cadastrar local </button>
+        <hr>
+        Digite o numero para lembrar a viajem:
+        <br>
+        <input id="n_pesquisa">
+        <br><br>
+        <button onclick="lembrar()"> Relembrar viagem </button>
+        <div id="result">
+
+        </div>
+    </center>
+</body>
+
+</html>
+
+<script>
+    let lugares = [];
+
+    function cadastrar() {
+        var local = lugar.value;
+        lugares.push(local);
+    }
+
+    function lembrar() {
+        num_p = Number(n_pesquisa.value);
+
+        if (num_p >= 1 && num_p <= lugares.length) {
+            result.innerHTML = `<br>${num_p}ª Viagem: ${lugares[num_p - 1]}`;
+        } else {
+            result.innerHTML = `<br>Você não fez uma ${num_p}ª viagem!`;
+        }
+    }
+</script>

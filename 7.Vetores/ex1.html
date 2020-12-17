@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Atividade 01 </title>
+</head>
+
+<body>
+    <center>
+        <h1> Filmes </h1>
+
+        Digite seu filme favorito:
+        <br>
+        <input type="text" id="filme_f">
+        <br><br>
+        <button onclick="cadastrar()"> Cadastrar </button>
+        <div id="painel">
+
+        </div>
+    </center>
+</body>
+
+</html>
+
+<script>
+    let filmes = [];
+
+    function cadastrar() {
+        var filme_s = filme_f.value;
+        filmes.push(filme_s);
+
+        if (filmes.length < 3) {
+            painel.innerHTML =
+                `<br>
+            Seu filme favorito: ${filmes[0]}
+            <br>
+            Seu 3º filme favorito: Ainda não existe
+            <br>
+            Total de filmes cadastrados: ${filmes.length}`;
+        } else {
+            painel.innerHTML =
+                `<br>
+            Seu filme favorito: ${filmes[0]}
+            <br>
+            Seu 3º filme favorito: ${filmes[2]}
+            <br>
+            Total de filmes cadastrados: ${filmes.length}`;
+        }
+    }
+</script>

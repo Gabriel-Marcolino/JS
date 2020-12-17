@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="nota" id="nota">
+  <input type="text" placeholder="Frequencia" id="frequencia"><br>
+  <button onclick="analise()">avaliar</button><br>
+  <div id="resultado"></div>
+</body>
+</html>
+<script>
+  function analise(){
+    var nota = Number(nota.value);
+    var frequencia = Number(frequencia.value);
+
+    var aprovado = nota>6 && frequencia>75;
+    var r_nota=nota <6;
+    var r_frequencia=frequencia<75;
+
+    var frase="";
+
+    if(aprovado){
+      frase="Parabens,Aprovado(a)"
+    }else{
+      if(r_nota){
+        frase="Reprovado(a) por nota<br>";
+
+      }
+      if(r_frequencia){
+frase += "Reprovado por frequencia";
+      }
+    }
+    resultado.innerHTML=frase;
+  }
+</script>

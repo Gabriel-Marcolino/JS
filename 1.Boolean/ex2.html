@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="insira sua altura" id="i_altura"><br>
+  <button onclick="analise()">Analisar</button><br>
+
+  <b id="b_piloto"></b><br>
+  <b id="b_velejador"></b><br>
+  <b id="b_jogador"></b><br>>
+</body>
+</html>
+
+<script>
+  function analise(){
+    var altura=Number (i_altura.value);
+
+    var a_pilotovelejador=altura<1.60
+    var a_jogador=altura>1.60 && altura<=1.85;
+
+    if(a_pilotovelejador) {
+      b_piloto.innerHTML='Pode tentar ser piloto de corrida';
+      b_velejador.innerHTML='pode tentar ser velejador';
+      b_jogador.innerHTML='';
+    }
+    if(a_jogador){
+      b_piloto.innerHTML='';
+      b_velejador.innerHTML='';
+      b_jogador.innerHTML='Pode tentar ser jogador de futebol ou handebol'
+    }
+  }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Saldo: R$ <b id="txt_saldo">0.00</b> <br>
+    Depósitos: <b id="txt_deposito">0</b> <br>
+    Saques: <b id="txt_saques">0</b> <br>
+    <button onclick="Depositar()">Depositar 100</button> 
+    <button onclick="Saque()">Sacar 20</button>
+</body>
+</html>
+<script>
+    let conta={
+        saldo: 0,
+        deposito: 0,
+        saque: 0
+    }
+
+    function Depositar(){
+        conta.saldo+=100;
+        conta.deposito++;
+        txt_saldo.innerHTML = conta.saldo;
+        txt_deposito.innerHTML=conta.deposito;
+    }
+    function Saque(){
+        conta.saldo-=20;
+        conta.saque++;
+        txt_saldo.innerHTML= conta.saldo;
+        txt_saques.innerHTML=conta.saque;
+    }
+</script>

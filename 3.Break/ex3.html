@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<button onclick="fazer()">Ver minha sorte</button><br>
+<div id="imagem"></div>
+
+</body>
+</html>
+<script>
+    function fazer(){
+        imagem.innerHTML = "";
+        var d = 0
+        var h = 0
+        while (true){
+            var num = parseInt(Math.random() * 2 + 1)
+            if (d == 11 || h == 11){
+                break
+            }
+            if (num == 1){
+            imagem.innerHTML += `<img style="width: 50px;" src="heart.png" alt="">`;
+            h++
+            }else{
+            imagem.innerHTML += `<img style="width: 50px;" src="deck.png" alt="">`;
+            d++
+        }
+        }
+        if (d > h) {
+    imagem.innerHTML += `<br>Você tem mais sorte no jogo`;
+} else {
+    imagem.innerHTML += `<br>Você tem mais sorte no amor`;
+}
+    }
+</script>

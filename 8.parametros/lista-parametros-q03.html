@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista parâmetros - q03</title>
+</head>
+<body>
+    <div id="div_lutador1" style="background-color: blue; height: 20px; width: 600px;"></div>
+    <button onclick="atualizar_vida(1, -25)">Apanhar devagar</button>
+    <button onclick="atualizar_vida(1, -80)">Apanhar forte</button>
+    <button onclick="atualizar_vida(1, 10)" id="bt_concentracao1">Concentrar e ganhar força</button>
+    <br> <br>
+    <div id="div_lutador2" style="background-color: red; height: 20px; width: 600px;"></div>
+    <button onclick="atualizar_vida(2, -25)">Apanhar devagar</button>
+    <button onclick="atualizar_vida(2, -80)">Apanhar forte</button>
+    <button onclick="atualizar_vida(2, 10)" id="bt_concentracao2">Concentrar e ganhar força</button>
+    
+</body>
+</html>
+<script>
+    let vida_lutador1 = 600;
+    let vida_lutador2 = 600;
+
+    // lutador: 1 ou 2
+    // alteracao: valor que aumenta ou diminui a "vida"
+    function atualizar_vida(lutador, alteracao) {
+        if (lutador==1) {
+            if (vida_lutador1 + alteracao <= 0) {
+                vida_lutador1 = 0;
+                bt_concentracao1.style.display='none';
+            } else {
+                vida_lutador1 += alteracao;
+            }
+        } else if (lutador==2) {
+            if (vida_lutador2 + alteracao <= 0) {
+                vida_lutador2 = 0;
+                bt_concentracao2.style.display='none';
+            } else {
+                vida_lutador2 += alteracao;
+            }
+        }
+        div_lutador1.style.width = `${vida_lutador1}px`;
+        div_lutador2.style.width = `${vida_lutador2}px`;
+    }
+
+</script>

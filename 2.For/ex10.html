@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Atividade 10 </title>
+</head>
+
+<body>
+    <center>
+        <h1> Banco </h1>
+
+        Quantos depósitos realizou?
+        <br>
+        <input id="qtd_depositos">
+        <br><br>
+        Qual o valor do depósito?
+        <br>
+        <input id="valor_d">
+        <br><br>
+        <button onclick="ver()"> Acompanhar a grana </button>
+        <div id="result">
+
+        </div>
+    </center>
+</body>
+
+</html>
+
+<script>
+    function ver() {
+        var qtd = Number(qtd_depositos.value);
+        var valor = Number(valor_d.value);
+        var total = 0;
+
+        result.innerHTML = '';
+
+        for (cont = 1; cont <= qtd; cont++) {
+            total += valor;
+            result.innerHTML += `<br> ${cont}º Mês: R$ ${total.toFixed(2)}`;
+        }
+
+        result.innerHTML += `<br> Total guardado: ${total.toFixed(2)}`;
+    }
+</script>

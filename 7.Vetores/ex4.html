@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <center>
+        <h1> Filmes </h1>
+
+        Digite seu filme favorito:
+        <br>
+        <input type="text" id="filme_f">
+        <br><br>
+        <button onclick="cadastrar()"> Cadastrar </button>
+        <div id="lista">
+
+        </div>
+    </center>
+</body>
+
+</html>
+
+<script>
+    let filmes = [];
+
+    function cadastrar() {
+        var filme_s = filme_f.value;
+        filmes.push(filme_s);
+
+        if ((filmes.length - 1) % 2 == 0) {
+            lista.innerHTML += `<br> <span style="color: blue"> ${filmes[filmes.length - 1]} </span>`
+        } else {
+            lista.innerHTML += `<br> <span style="color: red"> ${filmes[filmes.length - 1]} </span>`
+        }
+    }
+</script>

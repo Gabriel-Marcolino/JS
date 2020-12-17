@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Atividade 03 </title>
+</head>
+
+<body>
+    <center>
+        <h1> Filmes </h1>
+
+        Digite seu filme favorito:
+        <br>
+        <input type="text" id="filme_f">
+        <br><br>
+        <button onclick="cadastrar()"> Cadastrar </button>
+        <div id="lista">
+
+        </div>
+    </center>
+</body>
+
+</html>
+
+<script>
+    let filmes = [];
+
+    function cadastrar() {
+        var filme_s = filme_f.value;
+        filmes.push(filme_s);
+
+        lista.innerHTML += `<br> ${filmes[filmes.length - 1]}`
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Qtd de vitórias time 1" id="vitoria1">
+    <input type="text" placeholder="Qtd de vitórias time 2" id="vitoria2"><br>
+    <input type="text" placeholder="Qtd de empates time 1" id="empate1">
+    <input type="text" placeholder="Qtd de empates time 2" id="empate2"><br>
+    <input type="text" placeholder="Qtd de derrotas time 1" id="derrota1">
+    <input type="text" placeholder="Qtd de derrotas time 2" id="derrota2"><br>
+    <button onclick="analisar()">Analisar campanha</button>
+    <br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+
+function analisar(){
+    let camp1 = {
+        time1 : Number(vitoria1.value * 3) + Number(empate1.value)
+    }
+    let camp2 = {
+        time2 : Number(vitoria2.value * 3) + Number(empate2.value)
+    }
+    resultado.innerHTML = `O time A terminou o campeonato com ${camp1.time1} pontos<br>
+      O time B terminou o campeonato com ${camp2.time2} pontos `;
+}
+
+</script>
